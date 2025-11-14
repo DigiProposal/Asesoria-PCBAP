@@ -42,6 +42,31 @@
             <p class="text-lg md:text-xl font-semibold bg-red-600 rounded-lg px-4 py-3 inline-block mb-8">
                 El "Open Season" para cambiar es AHORA: del 10 de nov. al 8 de dic. de 2025.
             </p>
+
+            <!-- INICIO DEL COUNTDOWN -->
+            <div id="countdown" class="my-8">
+                <p class="text-lg text-yellow-300 uppercase font-semibold">Tiempo restante para actuar:</p>
+                <div class="flex justify-center space-x-4 md:space-x-8 mt-4">
+                    <div>
+                        <span id="days" class="text-4xl md:text-6xl font-extrabold text-red-500">00</span>
+                        <span class="block text-sm md:text-lg text-red-200">Días</span>
+                    </div>
+                    <div>
+                        <span id="hours" class="text-4xl md:text-6xl font-extrabold text-red-500">00</span>
+                        <span class="block text-sm md:text-lg text-red-200">Horas</span>
+                    </div>
+                    <div>
+                        <span id="minutes" class="text-4xl md:text-6xl font-extrabold text-red-500">00</span>
+                        <span class="block text-sm md:text-lg text-red-200">Minutos</span>
+                    </div>
+                    <div>
+                        <span id="seconds" class="text-4xl md:text-6xl font-extrabold text-red-500">00</span>
+                        <span class="block text-sm md:text-lg text-red-200">Segundos</span>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN DEL COUNTDOWN -->
+
             <p class="text-lg md:text-xl mb-10">
                 No actuar le costará miles de dólares. Le ayudamos a migrar a un plan superior y ahorrar.
             </p>
@@ -305,6 +330,53 @@
     </footer>
 
     <script>
+        // --- Lógica del Countdown ---
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Establecer la fecha de finalización (8 de diciembre de 2025, 23:59:59)
+            // Nota: El mes en JavaScript es 0-indexado (Enero=0, Diciembre=11)
+            const targetDate = new Date(2025, 11, 8, 23, 59, 59).getTime();
+
+            // Referencias a los elementos del DOM
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const countdownEl = document.getElementById('countdown');
+
+            // Actualizar el contador cada segundo
+            const countdownInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                // Si el contador termina
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    if(countdownEl) {
+                        countdownEl.innerHTML = '<p class="text-4xl font-bold text-red-500">El "Open Season" ha finalizado.</p>';
+                    }
+                    return;
+                }
+
+                // Cálculos de tiempo
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Formatear con dos dígitos
+                const format = (num) => num < 10 ? '0' + num : num;
+
+                // Actualizar el DOM (verificando que existan)
+                if (daysEl) daysEl.innerText = format(days);
+                if (hoursEl) hoursEl.innerText = format(hours);
+                if (minutesEl) minutesEl.innerText = format(minutes);
+                if (secondsEl) secondsEl.innerText = format(seconds);
+
+            }, 1000);
+        });
+
+
+        // --- Lógica del Formulario ---
         // Script simple para manejar el formulario sin recargar la página
         // y evitar el uso de 'alert()'.
         const contactForm = document.getElementById('contactForm');
