@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asesoría Migración FEHB Panamá | Ahorre Miles en 2026</title>
+    <title>Asesoría Experta Migración FEHB Panamá | Calcule su Ahorro 2026</title>
     <!-- Carga de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Carga de la fuente Inter -->
@@ -26,18 +26,32 @@
             color: #c53030; /* Rojo oscuro */
             font-weight: 700;
         }
+        /* Estilo para el resultado de la calculadora */
+        .calculadora-resultado span {
+            display: inline-block;
+            min-width: 100px;
+            font-weight: 700;
+            color: #1a202c; /* gray-900 */
+        }
     </style>
 </head>
 <body class="bg-gray-50">
+
+    <!-- 
+    ================================================================================
+    IMPORTANTE: Reemplace '5071234567' con su número de WhatsApp real (con código de país).
+    Aparece 5 veces en este archivo.
+    ================================================================================
+    -->
 
     <!-- 1. Sección de Héroe (Hero Section) -->
     <header class="bg-gray-900 text-white shadow-lg">
         <div class="container mx-auto px-6 py-16 md:py-20 text-center">
             <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-                ATENCIÓN: Jubilados del <span class="text-yellow-400">PCBAP (Código 43)</span> en Panamá
+                Asesoría Experta para Jubilados del <span class="text-yellow-400">PCBAP (Código 43)</span> en Panamá
             </h1>
             <p class="text-xl md:text-2xl font-light mb-6">
-                Sus primas de salud aumentarán MÁS DEL 100% en 2026.
+                Su prima de salud aumentará MÁS DEL 100% en 2026. Le ayudamos a entender sus opciones.
             </p>
             <p class="text-lg md:text-xl font-semibold bg-red-600 rounded-lg px-4 py-3 inline-block mb-8">
                 El "Open Season" para cambiar es AHORA: del 10 de nov. al 8 de dic. de 2025.
@@ -68,10 +82,10 @@
             <!-- FIN DEL COUNTDOWN -->
 
             <p class="text-lg md:text-xl mb-10">
-                No actuar le costará miles de dólares. Le ayudamos a migrar a un plan superior y ahorrar.
+                No tome una decisión sin información. Le ayudamos a migrar a un plan superior y ahorrar.
             </p>
-            <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 shadow-xl">
-                Agende su Consulta de Ahorro Hoy
+            <a href="https://wa.me/5071234567?text=Hola,%20me%20gustar%C3%ADa%20mi%20Asesor%C3%ADa%20Gratuita%20para%20la%20migraci%C3%B3n%20del%20plan%20PCBAP." target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 shadow-xl">
+                Inicie su Asesoría Gratuita
             </a>
         </div>
     </header>
@@ -117,13 +131,13 @@
             </div>
         </div>
     </section>
-
-    <!-- 3. La Solución (Tabla Comparativa) -->
+    
+    <!-- 3. La Solución (Tabla Comparativa Ahorro) -->
     <section id="solucion" class="py-16 md:py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">La Solución: Ahorre Miles Cambiando de Plan</h2>
             <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-12 text-center">
-                Migrar a un plan alternativo como <span class="font-bold">FEP Blue Basic</span> no solo es drásticamente más económico, sino que le permite mantener su cobertura en los mejores hospitales de Panamá. Vea el ahorro potencial.
+                Migrar a un plan alternativo no solo es drásticamente más económico, sino que le permite mantener o incluso mejorar su cobertura en los mejores hospitales de Panamá. Vea el ahorro potencial.
             </p>
             
             <div class="shadow-xl rounded-lg overflow-hidden">
@@ -173,95 +187,235 @@
         </div>
     </section>
 
-    <!-- 4. Beneficios en Panamá -->
+    <!-- 4. Calculadora de Ingreso Neto -->
+    <section id="calculadora" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Calcule su Ingreso Neto de Jubilación</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-center">
+                Vea cómo la prima de su plan de salud impacta directamente su ingreso mensual. Ingrese su monto de jubilación y compare los planes.
+            </p>
+            
+            <div class="max-w-2xl mx-auto bg-gray-50 border border-gray-200 rounded-lg shadow-xl p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="retirementAmount" class="block text-sm font-bold text-gray-700 mb-2">Su Jubilación Mensual ($)</label>
+                        <input type="number" id="retirementAmount" placeholder="Ej: 3000" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="planSelect" class="block text-sm font-bold text-gray-700 mb-2">Seleccione un Plan de Salud</label>
+                        <select id="planSelect" class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="0">Seleccione un plan...</option>
+                            <optgroup label="Planes PCBAP 2026 (Inacción)">
+                                <option value="662.09">PCBAP - Self Only (431)</option>
+                                <option value="1210.47">PCBAP - Self Plus One (433)</option>
+                                <option value="1191.78">PCBAP - Self & Family (432)</option>
+                            </optgroup>
+                            <optgroup label="Planes Recomendados 2026 (Ahorro)">
+                                <option value="289.83">FEP Blue Basic - Self Only (111)</option>
+                                <option value="691.71">FEP Blue Basic - Self Plus One (113)</option>
+                                <option value="773.20">FEP Blue Basic - Self & Family (112)</option>
+                                <option value="217.45">FSBP - Self Only (401)</option>
+                                <option value="558.91">FSBP - Self Plus One (403)</option>
+                                <option value="537.93">FSBP - Self & Family (402)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="text-center mb-6">
+                    <button id="calculateButton" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-xl">
+                        Calcular Ingreso Neto
+                    </button>
+                </div>
+                
+                <div id="calculatorResult" class="hidden bg-white border border-gray-200 rounded-lg p-6 text-lg space-y-3 calculadora-resultado">
+                    <p class="flex justify-between">Jubilación Mensual: <strong>$<span id="resultRetirement">0.00</span></strong></p>
+                    <p class="flex justify-between text-red-600">(-) Prima del Plan: <strong>$<span id="resultPremium">0.00</span></strong></p>
+                    <hr class="border-gray-300">
+                    <p class="flex justify-between text-2xl font-bold text-green-700">Ingreso Neto Estimado: <strong>$<span id="resultNetIncome">0.00</span></strong></p>
+                    <p id="calcErrorMessage" class="text-red-600 text-sm text-center hidden pt-2">Por favor, ingrese un monto de jubilación válido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Tabla Comparativa de Beneficios -->
+    <section id="comparativa" class="py-16 md:py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Comparativa Detallada de Beneficios Clave</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-12 text-center">
+                No solo compare precios, compare beneficios. Vea por qué FEP Blue Basic es nuestra principal recomendación para la mayoría de los jubilados en Panamá.
+            </p>
+            
+            <div class="shadow-xl rounded-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead class="bg-gray-800 text-white">
+                            <tr>
+                                <th class="text-left py-4 px-4 md:px-6 font-semibold uppercase">Beneficio (En Panamá)</th>
+                                <th class="text-left py-4 px-4 md:px-6 font-semibold uppercase">PCBAP (Plan Inviable)</th>
+                                <th class="text-left py-4 px-4 md:px-6 font-semibold uppercase bg-blue-800">FEP Blue Basic (Recomendado)</th>
+                                <th class="text-left py-4 px-4 md:px-6 font-semibold uppercase">FSBP (Opción Eficiente)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 divide-y divide-gray-200">
+                            <tr class="bg-gray-50">
+                                <td class="py-4 px-4 md:px-6 font-semibold">Deducible (en el Extranjero)</td>
+                                <td class="py-4 px-4 md:px-6">$0</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">$0</td>
+                                <td class="py-4 px-4 md:px-6">$300 (Self) / $600 (Familia)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 md:px-6 font-semibold">Visita Médico Primario</td>
+                                <td class="py-4 px-4 md:px-6">$5 Copago</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">$0 (Por Exención "Waiver")</td>
+                                <td class="py-4 px-4 md:px-6">10% Coaseguro (post-deducible)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-4 px-4 md:px-6 font-semibold">Visita Especialista</td>
+                                <td class="py-4 px-4 md:px-6">$5 Copago (con referido)</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">$0 (Por Exención "Waiver")</td>
+                                <td class="py-4 px-4 md:px-6">10% Coaseguro (post-deducible)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 md:px-6 font-semibold">Hospitalización</td>
+                                <td class="py-4 px-4 md:px-6">$0 Copago</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">$0 (Por Exención "Waiver")</td>
+                                <td class="py-4 px-4 md:px-6">10% Coaseguro (post-deducible)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-4 px-4 md:px-6 font-semibold">Sala de Emergencias</td>
+                                <td class="py-4 px-4 md:px-6">Probable Copago</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">$0 (Por Exención "Waiver")</td>
+                                <td class="py-4 px-4 md:px-6">10% Coaseguro (post-deducible)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 md:px-6 font-semibold">Quiropráctica</td>
+                                <td class="py-4 px-4 md:px-6">No Cubierto</td>
+                                <td class="py-4 px-4 md:px-6">No Cubierto</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">50 Visitas (hasta $75 c/u)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-4 px-4 md:px-6 font-semibold">Acupuntura</td>
+                                <td class="py-4 px-4 md:px-6">No Cubierto</td>
+                                <td class="py-4 px-4 md:px-6">No Cubierto</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">50 Visitas (hasta $75 c/u)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 md:px-6 font-semibold">Masaje Terapéutico</td>
+                                <td class="py-4 px-4 md:px-6">No Cubierto</td>
+                                <td class="py-4 px-4 md:px-6">No Cubierto</td>
+                                <td class="py-4 px-4 md:px-6 font-bold text-green-700">50 Visitas (hasta $75 c/u)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- PIE DE TABLA ACTUALIZADO -->
+            <p class="text-center text-gray-600 mt-6 text-sm">
+                *Datos extraídos de la herramienta oficial de OPM 
+                <a href="http://www.opm.gov/fehbcompare" target="_blank" class="text-blue-600 underline hover:text-blue-800">www.opm.gov/fehbcompare</a>. 
+                La exención (Waiver) del FEP Blue Basic se aplica a servicios en el extranjero a través de su red (GeoBlue), eliminando copagos. FSBP es superior para terapias complementarias.
+            </p>
+        </div>
+    </section>
+
+    <!-- 6. Beneficios en Panamá (Cómo Funciona) -->
     <section id="beneficios" class="py-16 md:py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Más que Ahorro: Cobertura y Tranquilidad en Panamá</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Cómo Funciona la Cobertura en Panamá</h2>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-12 text-center">
+                El cambio de plan no significa perder acceso. Le guiamos en el proceso de "dos pasos" para asegurar que su nuevo plan funcione desde el primer día en los mejores hospitales.
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <!-- Beneficio 1 -->
                 <div class="border border-gray-200 rounded-lg p-8 shadow-lg">
                     <h3 class="text-2xl font-bold text-blue-700 mb-4">Mantenga sus Médicos</h3>
                     <p class="text-lg text-gray-700">
-                        Los planes alternativos (FEP Blue y FSBP) le dan acceso a la red de hospitales y médicos que ya confía, incluyendo <span class="font-semibold">Pacífica Salud, The Panama Clinic y Hospital Mae Lewis</span>.
+                        Los planes FEP Blue y FSBP le dan acceso a la red de hospitales que ya confía, incluyendo <span class="font-semibold">Pacífica Salud, The Panama Clinic y Hospital Mae Lewis</span>.
                     </p>
                 </div>
                 <!-- Beneficio 2 -->
                 <div class="border border-gray-200 rounded-lg p-8 shadow-lg">
                     <h3 class="text-2xl font-bold text-blue-700 mb-4">Facturación Directa ($0 Pago)</h3>
                     <p class="text-lg text-gray-700">
-                        Aseguramos su activación en <span class="font-semibold">GeoBlue (para FEP Blue)</span> o Aetna Int'l. Esto le permite usar "Direct Billing" (Facturación Directa) para no pagar nada en el punto de servicio.
+                        Aseguramos su activación en <span class="font-semibold">GeoBlue (para FEP Blue)</span> o Aetna Int'l. Esto le permite usar "Direct Billing" (Facturación Directa) para no pagar nada en el punto de servicio (en planes recomendados).
                     </p>
                 </div>
                 <!-- Beneficio 3 -->
                 <div class="border border-gray-200 rounded-lg p-8 shadow-lg">
                     <h3 class="text-2xl font-bold text-blue-700 mb-4">Navegación Experta</h3>
                     <p class="text-lg text-gray-700">
-                        El sistema de OPM es complejo. Nosotros le acompañamos en CADA paso: desde el análisis, la ejecución en el portal OPM, hasta la activación de su cobertura internacional.
+                        El sistema es complejo. Nosotros le acompañamos en CADA paso: desde el análisis, la ejecución en OPM, hasta la activación de su cobertura internacional (el "Paso 2" que muchos olvidan).
                     </p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- 5. Tabla de Precios del Servicio -->
+    <!-- 7. Tabla de Precios del Servicio (ACTUALIZADA) -->
     <section id="precios" class="py-16 md:py-20 bg-gray-100">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Nuestros Servicios de Consultoría</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Nuestros Servicios de Asesoría</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-center">
-                Elija el nivel de acompañamiento que necesita. Una inversión única para un ahorro garantizado de miles de dólares cada año.
+                Elija el nivel de acompañamiento que necesita. Comience con nuestro análisis gratuito para entender sus opciones y su ahorro potencial.
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                <!-- Nivel 1 -->
-                <div class="bg-white rounded-lg p-8 shadow-lg border border-gray-200 flex flex-col justify-between">
+                <!-- Nivel 1 (GRATIS) -->
+                <div class="bg-white rounded-lg p-8 shadow-lg border border-gray-200 flex flex-col justify-between relative">
+                    <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-600 text-white px-4 py-1 rounded-full font-semibold text-sm">GRATIS</span>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Nivel 1: Análisis y Recomendación</h3>
-                        <p class="text-4xl font-extrabold text-gray-800 mb-6">$150.00</p>
-                        <p class="text-gray-600 mb-6">Ideal para clientes con habilidades tecnológicas que ejecutarán la migración por su cuenta.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 mt-4">Nivel 1: Análisis y Recomendación</h3>
+                        <p class="text-4xl font-extrabold text-green-600 mb-6">Gratis</p>
+                        <p class="text-gray-600 mb-6">Ideal para entender su situación, conocer el ahorro potencial y recibir una recomendación experta.</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
                             <li>Consulta 1 a 1 (Análisis de caso)</li>
+                            <li>Cálculo de ahorro personalizado</li>
                             <li>"Provider Check" de sus médicos locales</li>
-                            <li>Entrega de Informe de Recomendación Personalizado</li>
+                            <li>Entrega de Informe de Recomendación</li>
                         </ul>
                     </div>
-                    <a href="#contacto" class="w-full text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">
-                        Solicitar Nivel 1
+                    <a href="https://wa.me/5071234567?text=Hola,%20me%20gustar%C3%ADa%20mi%20Asesor%C3%ADa%20Gratuita%20(Nivel%201)%20para%20la%20migraci%C3%B3n%20del%20plan%20PCBAP." target="_blank" class="w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Comenzar Gratis
                     </a>
                 </div>
                 
-                <!-- Nivel 2 (Recomendado) -->
+                <!-- Nivel 2 (Pago Único) -->
                 <div class="bg-white rounded-lg p-8 shadow-2xl border-4 border-blue-600 flex flex-col justify-between relative">
                     <span class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full font-semibold text-sm">RECOMENDADO</span>
                     <div>
-                        <h3 class="text-2xl font-bold text-blue-800 mb-3">Nivel 2: Transición Completa</h3>
-                        <p class="text-4xl font-extrabold text-gray-800 mb-6">$350.00</p>
+                        <h3 class="text-2xl font-bold text-blue-800 mb-3 mt-4">Nivel 2: Transición Completa</h3>
+                        <p class="text-4xl font-extrabold text-gray-800 mb-2">$50.00</p>
+                        <p class="text-gray-500 font-semibold mb-6">(Pago Único)</p>
                         <p class="text-gray-600 mb-6">Nuestro servicio "White-Glove". Le garantizamos el ahorro y la tranquilidad de un proceso sin errores.</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
                             <li><span class="font-semibold">Todo lo del Nivel 1</span></li>
                             <li>Acompañamiento guiado "lado a lado" en el portal de OPM</li>
-                            <li>Soporte de activación y registro en <span class="font-semibold">GeoBlue / Aetna</span></li>
+                            <li>Soporte de activación y registro en <span class="font-semibold">GeoBlue / Aetna</span> (El "Paso 2")</li>
                             <li>Confirmación de servicio completado</li>
                         </ul>
                     </div>
-                    <a href="#contacto" class="w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <a href="https://wa.me/5071234567?text=Hola,%20quiero%20solicitar%20el%20servicio%20de%20Transici%C3%B3n%20Completa%20(Nivel%202)%20de%20$50." target="_blank" class="w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                         Solicitar Nivel 2
                     </a>
                 </div>
                 
-                <!-- Nivel 3 -->
+                <!-- Nivel 3 (Membresía) -->
                 <div class="bg-white rounded-lg p-8 shadow-lg border border-gray-200 flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Nivel 3: Concierge Premium</h3>
-                        <p class="text-4xl font-extrabold text-gray-800 mb-6">$950.00</p>
-                        <p class="text-gray-600 mb-6">Para casos complejos que requieren gestión proactiva y farmacia de alto costo.</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 mt-4">Nivel 3: Concierge Premium</h3>
+                        <p class="text-4xl font-extrabold text-gray-800 mb-2">$50.00 / al mes</p>
+                        <p class="text-gray-500 font-semibold mb-6">(Membresía Mensual)</p>
+                        <p class="text-gray-600 mb-6">Para casos complejos y soporte continuo durante todo el año (farmacia alto costo, gestión de reclamos, etc.)</p>
                         <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
                             <li><span class="font-semibold">Todo lo del Nivel 2</span></li>
+                            <li>Soporte y asesoría continua todo el año</li>
                             <li>Gestión de casos complejos (dependientes)</li>
                             <li>Análisis de farmacia de alto costo</li>
-                            <li>Servicio proactivo de "lobby" a proveedores</li>
                         </ul>
                     </div>
-                    <a href="#contacto" class="w-full text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <a href="https://wa.me/5071234567?text=Hola,%20estoy%20interesado%20en%20el%20servicio%20Concierge%20Premium%20(Nivel%203)%20de%20$50%20mensual." target="_blank" class="w-full text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-lg transition duration-300">
                         Solicitar Nivel 3
                     </a>
                 </div>
@@ -269,52 +423,26 @@
         </div>
     </section>
 
-    <!-- 6. Llamado a la Acción (Contacto) -->
+    <!-- 8. Llamado a la Acción (Contacto) - ACTUALIZADO A WHATSAPP -->
     <section id="contacto" class="py-16 md:py-20 bg-gray-900 text-white">
         <div class="container mx-auto px-6">
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">No se arriesgue a perder miles de dólares.</h2>
                 <p class="text-xl text-yellow-300 font-semibold mb-6">El plazo finaliza el 8 de diciembre de 2025.</p>
                 <p class="text-lg text-gray-300 mb-10">
-                    Contáctenos hoy para asegurar su cobertura y sus ahorros para 2026. Complete el formulario o envíenos un WhatsApp para una respuesta más rápida.
+                    Contáctenos hoy para su <span class="font-bold">asesoría gratuita</span>. Presione el botón de WhatsApp para una respuesta inmediata.
                 </p>
-            </div>
-            
-            <div class="max-w-xl mx-auto bg-white text-gray-800 rounded-lg shadow-2xl p-8 md:p-10">
-                <form id="contactForm">
-                    <div class="mb-5">
-                        <label for="name" class="block text-sm font-bold text-gray-700 mb-2">Nombre Completo</label>
-                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5">
-                        <div>
-                            <label for="email" class="block text-sm font-bold text-gray-700 mb-2">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-bold text-gray-700 mb-2">Teléfono / WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <label for="plan" class="block text-sm font-bold text-gray-700 mb-2">Tipo de Cobertura PCBAP Actual</label>
-                        <select id="plan" name="plan" class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            <option value="">Seleccione una opción...</option>
-                            <option value="431">Self Only (Código 431)</option>
-                            <option value="433">Self Plus One (Código 433)</option>
-                            <option value="432">Self & Family (Código 432)</option>
-                            <option value="no-se">No estoy seguro</option>
-                        </select>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg text-lg transition duration-300 shadow-xl">
-                            Enviar Solicitud de Consulta
-                        </button>
-                    </div>
-                </form>
-                <div id="successMessage" class="hidden mt-6 text-center">
-                    <p class="text-lg font-semibold text-green-700">¡Gracias! Hemos recibido su solicitud. Nos pondremos en contacto con usted a la brevedad.</p>
-                </div>
+                
+                <!-- Botón de WhatsApp en lugar del formulario -->
+                <a href="https://wa.me/5071234567?text=Hola,%20me%20gustar%C3%ADa%20mi%20Asesor%C3%ADa%20Gratuita%20para%20la%20migraci%C3%B3n%20del%20plan%20PCBAP." target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-12 rounded-lg text-xl transition duration-300 shadow-xl inline-flex items-center space-x-3">
+                    <!-- Icono simple de WhatsApp (SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                    <path fill="#fff" d="M4.8,43.2l3.6-13.5c-1.3-2.5-2-5.2-2-8c0-10.3,8.4-18.7,18.7-18.7c5,0,9.7,1.9,13.2,5.5 c3.6,3.6,5.5,8.3,5.5,13.2c0,10.3-8.4,18.7-18.7,18.7c-2.8,0-5.5-0.6-8-1.9L4.8,43.2z"></path>
+                    <path fill="#fff" d="M34,30.1c-0.1-0.1-0.3-0.2-0.5-0.3c-0.2-0.1-0.4-0.1-0.7-0.1c-0.2,0-0.5,0-0.7,0.1 c-0.2,0.1-0.5,0.2-0.6,0.4c-0.2,0.2-0.3,0.3-0.5,0.5c-0.2,0.2-0.3,0.5-0.5,0.6c-0.2,0.2-0.4,0.3-0.6,0.3 c-0.2,0.1-0.5,0.1-0.7,0c-0.2,0-0.5-0.1-0.7-0.2c-0.2-0.1-0.5-0.2-0.7-0.4c-1.1-0.6-2.1-1.3-3-2.1c-0.9-0.8-1.8-1.8-2.5-2.9 c-0.2-0.3-0.3-0.6-0.3-0.8c0-0.2,0-0.5,0.1-0.7c0.1-0.2,0.2-0.4,0.4-0.6c0.2-0.2,0.3-0.4,0.4-0.5c0.1-0.1,0.2-0.3,0.3-0.5 c0.1-0.2,0.1-0.4,0-0.7c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.5-0.3-0.7c-0.1-0.2-0.3-0.4-0.4-0.6c-0.1-0.2-0.3-0.4-0.4-0.5 c-0.2-0.1-0.4-0.3-0.6-0.4c-0.2-0.1-0.5-0.2-0.7-0.3c-0.2-0.1-0.5-0.1-0.7-0.1c-0.2,0-0.5,0-0.7,0.1c-0.2,0-0.5,0.1-0.7,0.2 c-0.2,0.1-0.4,0.3-0.6,0.4c-0.2,0.2-0.4,0.4-0.5,0.6c-0.1,0.2-0.3,0.5-0.4,0.7c-0.1,0.2-0.3,0.5-0.4,0.7c-0.1,0.2-0.2,0.5-0.3,0.8 c-0.1,0.3-0.2,0.6-0.3,0.9c-0,0.3-0.1,0.7-0.1,1c0,0.5,0.1,1.1,0.2,1.6c0.1,0.5,0.3,1,0.5,1.5c0.2,0.5,0.5,1,0.8,1.5 c0.3,0.5,0.7,1,1.1,1.5c1.2,1.4,2.6,2.6,4.1,3.6c1.5,1,3.2,1.9,4.9,2.5c0.8,0.3,1.6,0.5,2.4,0.6c0.8,0.1,1.6,0.2,2.3,0.2 c0.8,0,1.6-0.1,2.3-0.3c0.7-0.2,1.4-0.5,2-0.8c0.3-0.2,0.6-0.4,0.9-0.6c0.3-0.2,0.5-0.5,0.7-0.7c0.2-0.2,0.4-0.5,0.5-0.7 c0.1-0.2,0.3-0.5,0.4-0.8c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.3,0.1-0.7,0.1-1c0-0.4-0.1-0.8-0.2-1.2c-0.1-0.4-0.2-0.8-0.3-1.1 c-0.1-0.3-0.3-0.6-0.4-0.9c-0.1-0.3-0.3-0.5-0.4-0.8c-0.1-0.2-0.3-0.4-0.5-0.6c-0.2-0.2-0.3-0.4-0.5-0.5 C34.3,30.4,34.2,30.3,34,30.1z"></path>
+                    <path fill="#40c351" d="M25.1,34.8c-0.2,0-0.5,0-0.7,0.1c-0.2,0.1-0.5,0.2-0.6,0.4c-0.2,0.2-0.3,0.3-0.5,0.5 c-0.2,0.2-0.3,0.5-0.5,0.6c-0.2,0.2-0.4,0.3-0.6,0.3c-0.2,0.1-0.5,0.1-0.7,0c-0.2,0-0.5-0.1-0.7-0.2c-0.2-0.1-0.5-0.2-0.7-0.4 c-1.1-0.6-2.1-1.3-3-2.1c-0.9-0.8-1.8-1.8-2.5-2.9c-0.2-0.3-0.3-0.6-0.3-0.8c0-0.2,0-0.5,0.1-0.7c0.1-0.2,0.2-0.4,0.4-0.6 c0.2-0.2,0.3-0.4,0.4-0.5c0.1-0.1,0.2-0.3,0.3-0.5c0.1-0.2,0.1-0.4,0-0.7c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.5-0.3-0.7 c-0.1-0.2-0.3-0.4-0.4-0.6c-0.1-0.2-0.3-0.4-0.4-0.5c-0.2-0.1-0.4-0.3-0.6-0.4c-0.2-0.1-0.5-0.2-0.7-0.3 c-0.2-0.1-0.5-0.1-0.7-0.1c-0.2,0-0.5,0-0.7,0.1c-0.2,0-0.5,0.1-0.7,0.2c-0.2,0.1-0.4,0.3-0.6,0.4c-0.2,0.2-0.4,0.4-0.5,0.6 c-0.1,0.2-0.3,0.5-0.4,0.7c-0.1,0.2-0.3,0.5-0.4,0.7c-0.1,0.2-0.2,0.5-0.3,0.8c-0.1,0.3-0.2,0.6-0.3,0.9 c-0,0.3-0.1,0.7-0.1,1c0,0.5,0.1,1.1,0.2,1.6c0.1,0.5,0.3,1,0.5,1.5c0.2,0.5,0.5,1,0.8,1.5c0.3,0.5,0.7,1,1.1,1.5 c1.2,1.4,2.6,2.6,4.1,3.6c1.5,1,3.2,1.9,4.9,2.5c0.8,0.3,1.6,0.5,2.4,0.6c0.8,0.1,1.6,0.2,2.3,0.2c0.8,0,1.6-0.1,2.3-0.3 c0.7-0.2,1.4-0.5,2-0.8c0.3-0.2,0.6-0.4,0.9-0.6c0.3-0.2,0.5-0.5,0.7-0.7c0.2-0.2,0.4-0.5,0.5-0.7c0.1-0.2,0.3-0.5,0.4-0.8 c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.3,0.1-0.7,0.1-1c0-0.4-0.1-0.8-0.2-1.2c-0.1-0.4-0.2-0.8-0.3-1.1c-0.1-0.3-0.3-0.6-0.4-0.9 c-0.1-0.3-0.3-0.5-0.4-0.8c-0.1-0.2-0.3-0.4-0.5-0.6c-0.2-0.2-0.3-0.4-0.5-0.5c-0.2-0.2-0.3-0.3-0.5-0.4c-0.1-0.1-0.3-0.2-0.5-0.3 c-0.2-0.1-0.4-0.1-0.7-0.1C25.6,34.8,25.3,34.8,25.1,34.8z"></path>
+                    </svg>
+                    <span>Solicitar Asesoría por WhatsApp</span>
+                </a>
             </div>
         </div>
     </section>
@@ -374,21 +502,49 @@
 
             }, 1000);
         });
+        
+        
+        // --- Lógica de la Calculadora ---
+        const retirementAmountInput = document.getElementById('retirementAmount');
+        const planSelect = document.getElementById('planSelect');
+        const calculateButton = document.getElementById('calculateButton');
+        const calculatorResult = document.getElementById('calculatorResult');
+        const resultRetirement = document.getElementById('resultRetirement');
+        const resultPremium = document.getElementById('resultPremium');
+        const resultNetIncome = document.getElementById('resultNetIncome');
+        const calcErrorMessage = document.getElementById('calcErrorMessage');
 
+        calculateButton.addEventListener('click', function() {
+            const retirementAmount = parseFloat(retirementAmountInput.value);
+            const premium = parseFloat(planSelect.value);
 
-        // --- Lógica del Formulario ---
-        // Script simple para manejar el formulario sin recargar la página
-        // y evitar el uso de 'alert()'.
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
+            // Validación
+            if (isNaN(retirementAmount) || retirementAmount <= 0) {
+                calcErrorMessage.classList.remove('hidden');
+                calculatorResult.classList.add('hidden');
+                return;
+            }
 
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita el envío real del formulario
-            
-            // Oculta el formulario y muestra el mensaje de éxito
-            contactForm.classList.add('hidden');
-            successMessage.classList.remove('hidden');
+            if (premium === 0) {
+                // Si no han seleccionado plan, al menos muestra el ingreso
+                calcErrorMessage.classList.add('hidden');
+                resultRetirement.innerText = retirementAmount.toFixed(2);
+                resultPremium.innerText = (0).toFixed(2);
+                resultNetIncome.innerText = retirementAmount.toFixed(2);
+                calculatorResult.classList.remove('hidden');
+                return;
+            }
+
+            const netIncome = retirementAmount - premium;
+
+            // Mostrar resultados
+            calcErrorMessage.classList.add('hidden');
+            resultRetirement.innerText = retirementAmount.toFixed(2);
+            resultPremium.innerText = premium.toFixed(2);
+            resultNetIncome.innerText = netIncome.toFixed(2);
+            calculatorResult.classList.remove('hidden');
         });
+
     </script>
 
 </body>
